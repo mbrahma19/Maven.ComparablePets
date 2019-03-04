@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class TestIOConsoleInteger {
@@ -26,7 +25,7 @@ public class TestIOConsoleInteger {
     }
 
 
-    private void test(String input) {
+    private void test(String input,Integer expected) {
         // Given
         this.IOConsole = getConsoleWithBufferedInput(input);
 
@@ -42,7 +41,8 @@ public class TestIOConsoleInteger {
         byte[] inputBytes = inputString.getBytes();
         ByteArrayInputStream inputByteArray = new ByteArrayInputStream(inputBytes);
         Scanner scanner = new Scanner(inputByteArray);
-        IOConsole IOConsole = new IOConsole(scanner, System.out);
-        return IOConsole;
+//        IOConsole IOConsole = new IOConsole(scanner, System.out);
+        IOConsole console=null;
+        return  console;
     }
 }

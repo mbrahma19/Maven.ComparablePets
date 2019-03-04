@@ -48,7 +48,8 @@ public class TestIOConsoleString {
         byte[] inputBytes = inputString.getBytes();
         ByteArrayInputStream inputByteArray = new ByteArrayInputStream(inputBytes);
         Scanner scanner = new Scanner(inputByteArray);
-        IOConsole IOConsole = new IOConsole(scanner, System.out);
-        return IOConsole;
+//        IOConsole IOConsole = new IOConsole(scanner, System.out);
+        IOConsole console=null;
+        return  consolole;
     }
 }
