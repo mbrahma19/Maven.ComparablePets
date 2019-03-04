@@ -1,6 +1,6 @@
 package io.zipcoder;
 
-public abstract class Pet {
+public abstract class Pet implements Comparable{
 
     String name;
     Integer age;

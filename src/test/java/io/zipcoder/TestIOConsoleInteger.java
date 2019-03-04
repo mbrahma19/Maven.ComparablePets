@@ -30,7 +30,7 @@ public class TestIOConsoleInteger {
         this.IOConsole = getConsoleWithBufferedInput(input);
 
         // When
-        Integer actual = IOConsole.getTypeOfAnimal("");
+        Integer actual = IOConsole.getIntegerInput("");
 
         // Then
 
@@ -41,8 +41,7 @@ public class TestIOConsoleInteger {
         byte[] inputBytes = inputString.getBytes();
         ByteArrayInputStream inputByteArray = new ByteArrayInputStream(inputBytes);
         Scanner scanner = new Scanner(inputByteArray);
-//        IOConsole IOConsole = new IOConsole(scanner, System.out);
-        IOConsole console=null;
+        IOConsole console = new IOConsole(scanner, System.out);
         return  console;
     }
 }

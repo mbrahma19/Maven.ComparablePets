@@ -3,6 +3,8 @@ package io.zipcoder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Comparator;
+
 public class TestSort {
     @Test
     public void sortPetsTest() {
@@ -47,7 +49,7 @@ public class TestSort {
         Comparator petComparator = new PetComparator();
 
         // When
-        Pet[] actualPets = petComparator.comparatorSort(testPets);
+        Pet[] actualPets = petComparator.sort(testPets);
 
 
         // Then
@@ -63,7 +65,7 @@ public class TestSort {
         Comparator petComparator = new PetComparator();
 
         // When
-        Pet[] actualPets = petComparator.comparatorSort(testPets);
+        Pet[] actualPets = petComparator.sort(testPets);
 
 
         // Then

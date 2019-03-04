@@ -13,4 +13,8 @@ public class Turtle extends Pet{
     public String speak(){
         return "EeEeeh";
     }
+
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

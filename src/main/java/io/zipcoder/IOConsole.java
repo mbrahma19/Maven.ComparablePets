@@ -7,16 +7,20 @@ import java.util.Scanner;
 
 public class IOConsole {
 
-    private Scanner input;
-    private PrintStream output;
+    private final Scanner input;
+    private final PrintStream output;
 
-    public IOConsole(){
-
+    public IOConsole() {
+        this(System.in, System.out);
     }
 
-    public IOConsole(InputStream in, PrintStream out) {
-        this.input = new Scanner(in);
-        this.output = out;
+    public IOConsole(InputStream inputStream, OutputStream outputStream) {
+        this(new Scanner(inputStream), new PrintStream(outputStream));
+    }
+
+    public IOConsole(Scanner scanner, PrintStream printStream) {
+        this.input = scanner;
+        this.output = printStream;
     }
 
     public void print(String val, Object... args) {
@@ -32,8 +36,9 @@ public class IOConsole {
         return input.nextLine();
     }
 
-    public String getTypeOfAnimal(){
-        return null;
+    public Integer getIntegerInput(String prompt, Object... args){
+        println(prompt, args);
+        return input.nextInt();
     }
 
 

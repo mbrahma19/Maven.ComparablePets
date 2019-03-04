@@ -38,7 +38,7 @@ public class TestIOConsoleString {
         this.IOConsole = getConsoleWithBufferedInput(input);
 
         // When
-        String actual = IOConsole.getNameOfAnimal("");
+        String actual = IOConsole.getStringInput("");
 
         // Then
         Assert.assertEquals(actual, expected);
@@ -48,8 +48,7 @@ public class TestIOConsoleString {
         byte[] inputBytes = inputString.getBytes();
         ByteArrayInputStream inputByteArray = new ByteArrayInputStream(inputBytes);
         Scanner scanner = new Scanner(inputByteArray);
-//        IOConsole IOConsole = new IOConsole(scanner, System.out);
-        IOConsole console=null;
-        return  consolole;
+        IOConsole console = new IOConsole(scanner, System.out);
+        return  console;
     }
 }

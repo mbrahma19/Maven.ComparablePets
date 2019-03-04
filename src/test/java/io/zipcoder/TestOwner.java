@@ -29,7 +29,7 @@ public class TestOwner {
 
         // Then
 
-        Integer actualName = testOwner.getName();
+        String actualName = testOwner.getName();
 
         Assert.assertEquals(actualName, expectedName);
     }
@@ -44,7 +44,7 @@ public class TestOwner {
 
         // Then
 
-        Integer actualName = testOwner.getName();
+        String actualName = testOwner.getName();
 
         Assert.assertEquals(actualName, expectedName);
     }
@@ -63,7 +63,7 @@ public class TestOwner {
 
         // Then
 
-        String actualPetNumber = testOwner.getPetNumber();
+        Integer actualPetNumber = testOwner.getPetNumber();
 
         Assert.assertEquals(expectedPetNumber, actualPetNumber);
     }
@@ -80,7 +80,7 @@ public class TestOwner {
 
         // Then
 
-        String actualPetNumber = testOwner.getPetNumber();
+        Integer actualPetNumber = testOwner.getPetNumber();
 
         Assert.assertEquals(expectedPetNumber, actualPetNumber);
     }
