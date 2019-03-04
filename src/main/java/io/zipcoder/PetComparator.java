@@ -5,6 +5,6 @@ import java.util.Comparator;
 public class PetComparator implements Comparator<Pet> {
 
     public int compare(Pet o1, Pet o2) {
-        return 0;
+        return o2.compareTo(o1);
     }
 }

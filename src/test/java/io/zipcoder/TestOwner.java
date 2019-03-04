@@ -89,16 +89,21 @@ public class TestOwner {
     public void getPetsTest() {
         // Given
         Owner testOwner = new Owner();
-        testOwner.addPet(new Cat("Rainbow"));
-        testOwner.addPet(new Turtle("Red"));
-        testOwner.addPet(new Dog("Orange"));
-        testOwner.addPet(new Cat("Violet"));
+        Pet rainbow = new Cat("Rainbow");
+        Pet red = new Turtle("Red");
+        Pet orange = new Dog("Orange");
+        Pet violet = new Cat("Violet");
+
+        testOwner.addPet(rainbow);
+        testOwner.addPet(red);
+        testOwner.addPet(orange);
+        testOwner.addPet(violet);
 
         // When
         Pet[] actualPets = testOwner.getPets();
 
         // Then
-        Pet[] expectedPets = new Pet[]{new Cat("Rainbow"), new Turtle("Red"), new Dog("Orange"), new Cat("Violet")};
+        Pet[] expectedPets = new Pet[]{rainbow, red, orange, violet};
 
         Assert.assertEquals(expectedPets, actualPets);
     }
@@ -107,15 +112,17 @@ public class TestOwner {
     public void getPetsTest2() {
         // Given
         Owner testOwner = new Owner();
-        testOwner.addPet(new Cat("Sunshine"));
-        testOwner.addPet(new Turtle("Rain"));
+        Pet sunshine = new Cat("Sunshine");
+        Pet rain = new Turtle("Rain");
 
+        testOwner.addPet(sunshine);
+        testOwner.addPet(rain);
 
         // When
         Pet[] actualPets = testOwner.getPets();
 
         // Then
-        Pet[] expectedPets = new Pet[]{new Cat("Sunshine"), new Turtle("Rain")};
+        Pet[] expectedPets = new Pet[]{sunshine, rain};
 
         Assert.assertEquals(expectedPets, actualPets);
     }

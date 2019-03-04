@@ -68,7 +68,7 @@ public class TestDog {
         Dog testDog = new Dog();
 
         // When
-        String expectedSound = "Woof";
+        String expectedSound = "woof";
         String actualSound = testDog.speak();
 
         // Then

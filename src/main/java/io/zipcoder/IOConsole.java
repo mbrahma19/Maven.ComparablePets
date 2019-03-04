@@ -33,7 +33,7 @@ public class IOConsole {
 
     public String getStringInput(String prompt, Object... args) {
         println(prompt, args);
-        return input.nextLine();
+        return input.next();
     }
 
     public Integer getIntegerInput(String prompt, Object... args){

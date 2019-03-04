@@ -15,6 +15,12 @@ public class Turtle extends Pet{
     }
 
     public int compareTo(Object o) {
-        return 0;
+        if (o instanceof Dog) {
+            return -1;
+        } else if (o instanceof Cat) {
+            return -1;
+        } else{
+            return ((Turtle) o).getName().compareTo(getName());
+        }
     }
 }

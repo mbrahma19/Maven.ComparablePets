@@ -27,4 +27,12 @@ public abstract class Pet implements Comparable{
     }
 
     public abstract String speak();
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
